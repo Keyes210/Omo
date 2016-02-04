@@ -41,6 +41,11 @@ public class Tile extends Box{
         selected = b;
     }
 
+    public boolean isSelected(){
+        return selected;
+    }
+
+
     public void update(float delta){
         if(width < totalWidth && height < totalHeight){
             timer += delta;

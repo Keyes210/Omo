@@ -2,6 +2,7 @@ package com.alexlowe.omo;
 
 import com.alexlowe.omo.handler.Content;
 import com.alexlowe.omo.states.GSM;
+import com.alexlowe.omo.states.MenuState;
 import com.alexlowe.omo.states.PlayState;
 import com.badlogic.gdx.ApplicationAdapter;
 import com.badlogic.gdx.Gdx;
@@ -31,7 +32,8 @@ public class Omo extends ApplicationAdapter {
 
         batch = new SpriteBatch();
         gsm = new GSM();
-        gsm.push(new PlayState(gsm));
+        //gsm.push(new PlayState(gsm, PlayState.Difficulty.EASY));
+		gsm.push(new MenuState(gsm));
 	}
 
 	@Override
