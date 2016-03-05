@@ -41,12 +41,12 @@ public class MenuState extends State {
 
     @Override
     public void handleInput() {
-        if(Gdx.input.isTouched()){
+        if(Gdx.input.justTouched()){
             mouse.x = Gdx.input.getX();
             mouse.y = Gdx.input.getY();
             cam.unproject(mouse);
             if(play.contains(mouse.x, mouse.y)){
-                gsm.set(new PlayState(gsm, PlayState.Difficulty.NORMAL));
+                gsm.set(new DifficultyState(gsm));
             }
         }
     }
